@@ -4,9 +4,9 @@ import com.security.dto.UserRegistrationDTO;
 import com.security.service.DefaultUserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
 
-
-@RestController
+@Controller
 @RequestMapping("/register")
 public class RegistrationController {
     @Autowired
