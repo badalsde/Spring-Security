@@ -19,7 +19,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    SecurityFilterChain securityFilterChain(HttpSecurity http){
         http.authorizeHttpRequests((request)->
                 request.anyRequest().authenticated());
         http.sessionManagement(session->session.
@@ -30,7 +30,7 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService() throws Exception{
+    public UserDetailsService userDetailsService(){
         UserDetails user1 = User.withUsername("user")
                 .password("{noop}userpass")
                 .roles("USER")
